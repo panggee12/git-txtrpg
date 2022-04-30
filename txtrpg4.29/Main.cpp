@@ -36,7 +36,7 @@ void CMain::Initialize()
 void CMain::Update()
 {
 	int iInput = 0;
-	while (1)
+	while (g_exit)
 	{
 		system("cls");
 		m_pPlayer->Render();

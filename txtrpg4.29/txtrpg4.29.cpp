@@ -4,6 +4,8 @@
 #include "stdafx.h"
 #include "Main.h"
 
+bool g_exit = true;
+
 int main()
 {
 	CMain Main;

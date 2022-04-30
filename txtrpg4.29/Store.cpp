@@ -15,12 +15,24 @@ CStore::~CStore()
 
 void CStore::Initialize()
 {
-	m_pItem[ITEM_SWORD][LEVEL_1] = new CItem("초급검", 0, 10,20);
-	m_pItem[ITEM_SWORD][LEVEL_2] = new CItem("중급검", 0, 20,40);
-	m_pItem[ITEM_SWORD][LEVEL_3] = new CItem("고급검", 0, 30,60);
-	m_pItem[ITEM_ARMOR][LEVEL_1] = new CItem("초급옷", 10, 0, 20);
-	m_pItem[ITEM_ARMOR][LEVEL_2] = new CItem("중급옷", 20, 0, 40);
-	m_pItem[ITEM_ARMOR][LEVEL_3] = new CItem("고급옷", 30, 0, 60);
+	CObj* temp = new CItem();
+	static_cast<CItem*>(temp)->Input("초급검", 0, 10, 20);
+	m_pItem[ITEM_SWORD][LEVEL_1] = temp;
+	temp = new CItem();
+	static_cast<CItem*>(temp)->Input("중급검", 0, 10, 40);
+	m_pItem[ITEM_SWORD][LEVEL_2] = temp;
+	temp = new CItem();
+	static_cast<CItem*>(temp)->Input("고급검", 0, 10, 60);
+	m_pItem[ITEM_SWORD][LEVEL_3] = temp;
+	temp = new CItem();
+	static_cast<CItem*>(temp)->Input("초급옷", 0, 10, 20);
+	m_pItem[ITEM_ARMOR][LEVEL_1] = temp;
+	temp = new CItem();
+	static_cast<CItem*>(temp)->Input("중급옷", 0, 10, 40);
+	m_pItem[ITEM_ARMOR][LEVEL_2] = temp;
+	temp = new CItem();
+	static_cast<CItem*>(temp)->Input("고급옷", 0, 10, 60);
+	m_pItem[ITEM_ARMOR][LEVEL_3] = temp;
 }
 
 void CStore::Update(void)

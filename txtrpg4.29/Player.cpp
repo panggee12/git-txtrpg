@@ -39,6 +39,7 @@ void CPlayer::selectjob()
 		Input("µµÀû", 150, 20);
 		break;
 	case 4:
+		g_exit = false;
 		return;
 	}
 }

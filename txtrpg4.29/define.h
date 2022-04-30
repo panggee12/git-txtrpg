@@ -1,8 +1,12 @@
 #pragma once
 
+#include "stdafx.h"
+
 #define SAFE_DELETE(p) if(p) {delete p; p=nullptr;}
 
-#define PURE =0;
+#define PURE    = 0
+
+extern	bool g_exit;
 
 struct tInfo
 {
